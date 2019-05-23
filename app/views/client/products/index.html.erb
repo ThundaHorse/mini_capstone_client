@@ -1,0 +1,9 @@
+<h1>Products</h>
+
+<% @products.parse.each do |product| %>
+  <h4><%= product['name'] %></h4>
+  <p4><%= product['description'] %></p4>
+  <%= image_tag("#{product['image_url']}") %>
+
+
+<% end %>

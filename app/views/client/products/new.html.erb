@@ -1,0 +1,18 @@
+<h1>New Product Form</h1>
+
+
+<%= form_tag '/client/products', method: :post do %>
+  <div>
+    Name: <input type="text" name="name">
+  </div>
+  <div>
+    Price: <input type="text" name="price">
+  </div>
+  <div>
+    Quantity: <input type="text" name="quantity">
+  </div>
+  <div>
+    Description: <input type="text" name="description">
+  </div>
+  <input type="submit" value="Create Product">
+<% end %>
