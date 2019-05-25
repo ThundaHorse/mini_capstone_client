@@ -1,9 +1,11 @@
-<h1>Products</h>
+<h1>Products</h1>
 
 <% @products.parse.each do |product| %>
-  <h4><%= product['name'] %></h4>
-  <p4><%= product['description'] %></p4>
-  <%= image_tag("#{product['image_url']}") %>
-
-
+  <center> 
+    <h style = "text-decoration: underline;">
+      <a href="/client/products/<%= "#{product['id']}" %>"><%= product["name"] %></a>
+      <%= product['quantity'] %>
+    </h>
+    <p><%= product['description'] %></p>
+  </center>
 <% end %>
