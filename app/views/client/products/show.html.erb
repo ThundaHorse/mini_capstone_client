@@ -1,7 +1,23 @@
-<a href="/client/products">Home</a><center><h1><%= @product['name'] %></h1></center>
-
-<center><h3><%= @product['name'] %></h3>Price<h2><%= @product['price'] %></h2></center>
-
 <div>
   <a href="/client/products/<%= @product['id'] %>/edit">Edit</a>
 </div>
+<center style="color: white;">
+  <h1>
+    <%= @product['name'] %>
+  </h1>
+</center>
+
+<div class="card mb-3">
+  <img src="<%= @product['images'][0]['url']%>" class="card-img-top" alt="image">
+  <div class="card-body">
+    <h5 class="card-title">Product</h5>
+    <p class="card-text"><%= @product['description'] %></p>
+    <h5 class="card-title">Price</h5>
+    <p class="card-text"><%= @product['price'] %></p>
+    <h5 class="card-title">Quantity</h5>
+    <p class="card-text"><%= @product['quantity'] %></p>
+    
+  </div>
+</div>
+
+

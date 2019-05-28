@@ -1,18 +1,32 @@
-<h1>New Product Form</h1>
-
-
+<br>
+<div class="row">
+  <div class="col-md-8 offset-md-2">
+  <h1 style="color: white; text-align: center;">New Product Form</h1>
 <%= form_tag '/client/products', method: :post do %>
-  <div>
-    Name: <input type="text" name="name">
-  </div>
-  <div>
-    Price: <input type="text" name="price">
-  </div>
-  <div>
-    Quantity: <input type="text" name="quantity">
-  </div>
-  <div>
-    Description: <input type="text" name="description">
-  </div>
-  <input type="submit" value="Create Product">
+  <form>
+    <div class="form-row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Product Name" id="inputName" name="Product">
+      </div>
+
+      <div class="col">
+        <input type="number" class="form-control" placeholder="Quantity" id="inputQuantity" name="Quantity">
+      </div>
+      
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Description" id="inputDescription" name="Description">
+      </div>
+
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Price" id="inputPrice" name="Price">
+      </div>
+
+
+      <button type="submit" class="btn btn-info">Create</button>
+    </div>
+  </form>
+
+
+
 <% end %>
+

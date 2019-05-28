@@ -1,11 +1,16 @@
-<h1>Products</h1>
-
-<% @products.parse.each do |product| %>
-  <center> 
-    <h style = "text-decoration: underline;">
-      <a href="/client/products/<%= "#{product['id']}" %>"><%= product["name"] %></a>
-      <%= product['quantity'] %>
-    </h>
-    <p><%= product['description'] %></p>
-  </center>
-<% end %>
+<center><h1 style="color:white;">Products</h1></center>
+<br>
+<div class="row">
+  <% @products.parse.each do |product| %>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="<%= product['images'] %>" class="card-img-top" alt="<%= product["images"]%>">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/client/products/<%= product['id'] %>"><%= product["name"] %></a></h5>
+              <p class="card-text">Price: <%= product['price'] %></p>
+              <p class="card-text">Quantity: <%= product['quantity'] %></p>
+          </div>
+      </div>
+    </div>
+  <% end %>
+</div>
